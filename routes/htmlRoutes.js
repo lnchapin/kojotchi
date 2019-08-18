@@ -13,7 +13,11 @@ router.get('/dashboard', ensureAuthenticated, (req, res) =>
     user: req.user
   })
 );
-
+router.get('/test', ensureAuthenticated, (req, res) =>
+  res.render('testing', {
+    user: req.user
+  })
+);
 
 router.get('/logout', (req, res) => {
   req.logout();

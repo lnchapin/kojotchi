@@ -80,6 +80,11 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
+router.get('/info', (req, res) => {
+  console.log(req.user)
+  res.send(req.user)
+})
+
 router.get('/logout', (req, res) => {
   req.logout();
   req.flash('success_message', 'You are logged out');
