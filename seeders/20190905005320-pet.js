@@ -12,7 +12,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Data', [
+    return queryInterface.bulkInsert('Pet', [
       {
         post:"Lindsay's Post",
         user_id:1
@@ -32,6 +32,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-    return queryInterface.bulkDelete('Data', null, {});
+    return queryInterface.bulkDelete('Pet', null, {});
   }
 };
