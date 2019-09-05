@@ -14,12 +14,14 @@ module.exports = {
     */
     return queryInterface.bulkInsert('Pet', [
       {
-        post:"Lindsay's Post",
-        user_id:1
+        name: "Bob",
+        user_id:1,
+        type: "succulent"
       },
       {
-        post:"A test post",
-        user_id:2
+        name: "Bill",
+        user_id: 2,
+        type: "tropic"
       }
     ], {});
   },
