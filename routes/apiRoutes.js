@@ -80,9 +80,14 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 });
 
-router.get('/info', (req, res) => {
-  console.log(req.user)
-  res.send(req.user)
+router.post('/test', (req, res) => {
+  console.log(req.body);
+  console.log(req.user.id);
+  var twoThings = {
+    id: req.user.id,
+    data: req.body
+  }
+  res.send(twoThings)
 })
 
 router.get('/logout', (req, res) => {

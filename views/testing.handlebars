@@ -2,7 +2,7 @@
 <p class="lead mb-3">TESTINGS {{user.firstName}}</p>
 <a href="/logout" class="btn btn-secondary">Logout</a>
 <script type="text/javascript">
-  $.get("/api/info").then(function(data) {
+  $.post("/api/test", {name: "Lindsay", post: "testing"}).then(function(data) {
     console.log(data);
   })
 </script>

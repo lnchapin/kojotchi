@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth')
+const db = require('../models');
+const Users = db.User;
+const Posts = db.Posts;
 
 router.get('/', forwardAuthenticated, (req, res) => res.render('index'))
 
