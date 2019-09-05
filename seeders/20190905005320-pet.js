@@ -12,7 +12,7 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('Pet', [
+    return queryInterface.bulkInsert('Pets', [
       {
         name: "Bob",
         user_id:1,
@@ -34,6 +34,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-    return queryInterface.bulkDelete('Pet', null, {});
+    return queryInterface.bulkDelete('Pets', null, {});
   }
 };
